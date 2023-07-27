@@ -1,0 +1,7 @@
+1- Activar el Env de Python3
+    python3 –m venv boto
+    source boto/bin/activate
+    pip install boto3
+
+2- Revisar las librerias instaldas
+    pip freeze
