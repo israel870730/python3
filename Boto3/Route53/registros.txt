@@ -1,2 +1,0 @@
-test4.reno.poc.vficloud.net,A,100,dualstack.internal-k8s-renovite-608827600a-1549390569.eu-west-2.elb.amazonaws.com
-test4.reno.poc.vficloud.net,A,50,dualstack.internal-k8s-renovite-608827600a-1549390569.eu-west-2.elb.amazonaws.com

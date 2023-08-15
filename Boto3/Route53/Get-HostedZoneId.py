@@ -4,7 +4,7 @@ import boto3
 route53_client = boto3.client('route53')
 
 # Define el nombre de la zona hospedada
-hosted_zone_name = 'reno.poc.vficloud.net'
+hosted_zone_name = 'reno.cst.vficloud.net'
 
 # Obtiene la lista de zonas hospedadas
 response = route53_client.list_hosted_zones_by_name(DNSName=hosted_zone_name)

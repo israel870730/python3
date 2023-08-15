@@ -4,7 +4,7 @@ import boto3
 route53_client = boto3.client('route53')
 
 # Define el ID de la zona hospedada
-hosted_zone_id = 'Z02608501GXHZ4F42FBXM'
+hosted_zone_id = 'Z06002641ST07BELWWL3N'
 
 # Obtiene la lista de registros de la zona hospedada
 response = route53_client.list_resource_record_sets(HostedZoneId=hosted_zone_id)
