@@ -1,5 +1,5 @@
 import boto3
-from inputs_poc_prod import *
+from inputs_prod import * #Si cambio de entorno tengo que cambiar el input
 
 # Crea un cliente de Route53
 route53_client = boto3.client('route53')
@@ -16,16 +16,12 @@ for record in records_to_modify:
             MaxItems='1'
         )
 
-        # existing_record = response['ResourceRecordSets'][0]
-        # record_find = existing_record['Name']
         print('Registro buscado:')
         print(record['record_name'])
         print()
-        #print(record_find)
 
         # Verifica si se encontró el registro
         if 'ResourceRecordSets' in response and len(response['ResourceRecordSets']) > 0 and response['ResourceRecordSets'][0]['Name'] == record['record_name'] :
-        #if 'ResourceRecordSets' in response and len(response['ResourceRecordSets']) > 0 :
             # El registro se encontró en la lista de ResourceRecordSets
             record = response['ResourceRecordSets'][0]['Name']
             print('Registro encontrado:')
@@ -85,10 +81,6 @@ for record in records_to_modify:
         HostedZoneId=hosted_zone_id,
         ChangeBatch=change_batch
     )
-
-    #print('Registro modificado exitosamente.')
-    # print(f'Registro {record["record_name"]} modificado exitosamente.')
-    # print('-------')
 
     print('Registro modificado:')
     print(existing_record['Name'])

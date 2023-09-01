@@ -1,5 +1,5 @@
 import boto3
-from inputs_cst import *
+from inputs_cst import * #Si cambio de entorno tengo que cambiar el input
 
 # Crea un cliente de Route53
 route53_client = boto3.client('route53')
