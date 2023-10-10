@@ -4,7 +4,7 @@ import boto3
 route53_client = boto3.client('route53')
 
 # Define los parámetros del registro
-hosted_zone_id = 'Z02608501GXHZ4F42FBXM'
+hosted_zone_id = '#-ID'
 #record_name = 'test8.reno.poc.vficloud.net.'
 record_type = 'A'
 elb_arn_0 = 'dualstack.internal-k8s-renovite-49739b7d24-990850777.eu-west-2.elb.amazonaws.com.'

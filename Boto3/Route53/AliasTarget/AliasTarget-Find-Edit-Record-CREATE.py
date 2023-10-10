@@ -4,7 +4,7 @@ import boto3
 route53_client = boto3.client('route53')
 
 # Define los parámetros del registro a modificar
-hosted_zone_id = 'Z06002641ST07BELWWL3N'
+hosted_zone_id = '#-ID'
 #record_name = 'test.reno.poc.vficloud.net.'
 record_type = 'A'
 
@@ -17,7 +17,7 @@ elb_arn_0 = 'dualstack.internal-k8s-renovite-7e741991b4-567387560.eu-west-2.elb.
 # Define los registros a modificar
 records_to_modify = [
     {
-        'record_name': 'test.reno.cst.vficloud.net.',
+        'record_name': 'test.reno.poc.vficloud.net.',
         'elb_arn': elb_arn_100
     }
 ]
